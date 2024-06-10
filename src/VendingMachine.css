@@ -3,11 +3,13 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-color: rgb(163,191,226);
+        background-color: rgb(148,200,196);
+        color: rgb(236,234,222);
     }
 
     .vending-machine{
-        font-weight: 400;
+        color: rgb(236,234,222);
+        font-weight: 800;
     }
     
 }
