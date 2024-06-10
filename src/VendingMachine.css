@@ -1,0 +1,13 @@
+@media screen {
+    .vending-machine-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgb(163,191,226);
+    }
+
+    .vending-machine{
+        font-weight: 400;
+    }
+    
+}
