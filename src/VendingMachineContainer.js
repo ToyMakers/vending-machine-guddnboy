@@ -3,12 +3,25 @@ import "./VendingMachine.css";
 
 const VendingMachineContainer = () => {
   return (
+  <div>
+    <header>
+      <h1>VendingMachine</h1>
+    </header>
     <div className="vending-machine-container">
-        <h1>VendingMachine</h1>
         <div className="vending-machine">
-          <p>이곳에 벤딩머신 둘 예정</p>
+          <div className="drink-list">
+            <button className="drinks">1</button>
+            <button className="drinks">2</button>
+            <button className="drinks">3</button>
+            <button className="drinks">4</button>
+            <button className="drinks">5</button>
+            <button className="drinks">6</button>
+            <button className="drinks">7</button>
+            <button className="drinks">8</button>
+          </div>
         </div>
     </div>
+  </div>
   );
 };
 
