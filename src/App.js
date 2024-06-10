@@ -1,10 +1,11 @@
 import './App.css';
+import VendingMachineContainer from './VendingMachineContainer.js';
 
 function App() {
   return (
-    <div className='VendingMachine'>
-      <h1>VendingMachine</h1>
-    </div>
+    <div className='App'>
+      <VendingMachineContainer />
+      </div>
   );
 }
 
