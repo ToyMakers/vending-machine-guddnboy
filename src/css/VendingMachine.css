@@ -39,7 +39,8 @@
     }
 
     .drink-out{
-        display: flex;
+        display: contents;
+        justify-content: center;
         width: 100px;
         height: 50px;
     }
