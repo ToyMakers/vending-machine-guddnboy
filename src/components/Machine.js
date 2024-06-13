@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/VendingMachine.css";
+import MoneyContainer from "./containers/MoneyContainer";
 
 const Machine = () => {
     return(
@@ -13,6 +14,12 @@ const Machine = () => {
             <button className="drinks">6</button>
             <button className="drinks">7</button>
             <button className="drinks">8</button>
+          </div>
+          <div className="money-container">
+            <MoneyContainer />
+          </div>
+          <div className="drink-out">
+            <button>상품 나오는 곳</button>
           </div>
         </div>
     );
