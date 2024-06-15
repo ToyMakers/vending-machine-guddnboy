@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/VendingMachine.css";
-import "../css/drinks.css";
 import ReturnDrink from "./ReturnDrink";
 import DrinkList from "./DrinkList";
 
