@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import defaultReturning from '../img/defaultReturing.png';
 import Returning from '../img/Returning.png';
-import '../css/Machine.css';
+import '../css/VendingMachine.css';
 
 const ReturnDrink = () => {
   const [isHovered, setIsHovered] = useState(false);

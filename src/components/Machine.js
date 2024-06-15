@@ -7,8 +7,16 @@ import DrinkList from "./DrinkList";
 const Machine = () => {
     return(
         <div className="vending-machine">
-          <div className="drink-list">
-            <DrinkList/>
+          <div>
+            <h3>나만의 자판기</h3>
+          </div>
+          <div className="drink-list-container">
+            <div className="drink-list">
+              <DrinkList/>
+            </div>
+          </div>
+          <div className="money-container">
+            
           </div>
           <div className="drink-out-container">
             <ReturnDrink />
