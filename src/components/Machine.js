@@ -2,6 +2,7 @@ import React from "react";
 import "../css/VendingMachine.css";
 import ReturnDrink from "./ReturnDrink";
 import DrinkList from "./DrinkList";
+import Money from "./Money";
 
 
 const Machine = () => {
@@ -16,7 +17,7 @@ const Machine = () => {
             </div>
           </div>
           <div className="money-container">
-            
+            <Money />
           </div>
           <div className="drink-out-container">
             <ReturnDrink />
