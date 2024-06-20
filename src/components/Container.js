@@ -5,22 +5,21 @@ import Wallet from "./Wallet";
 import { useState } from "react";
 
 const Container = () => {
-  const [money, setMoney] = useState(0);
+    const [money, setMoney] = useState(0);
 
-
-  return (
-    <div>
-    <header>
-      <h1>VendingMachine</h1>
-    </header>
-    <div className="machine-wallet">
-      <div className="vending-machine-container">
-        <Machine/>
-      </div>
-      <Wallet money={money} setMoney={setMoney}/>
-    </div>
-    </div>
-  );
+    return (
+        <div>
+            <header>
+                <h1>VendingMachine</h1>
+            </header>
+            <div className="machine-wallet">
+                <div className="vending-machine-container">
+                    <Machine money={money} setMoney={setMoney} />
+                </div>
+                <Wallet money={money} setMoney={setMoney} />
+            </div>
+        </div>
+    );
 };
 
 export default Container;
