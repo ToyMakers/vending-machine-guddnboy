@@ -1,9 +1,17 @@
 import React from "react";
-import "../css/money.css";
-import coin from "../img/coin.png";
+import "../css/Wallet.css";
+import money_500 from "../img/money_500.png";
+import money_1000 from "../img/money_1000.png";
+import money_2000 from "../img/money_2000.png";
 
 const Wallet = ({money, setMoney}) => {
-    function InsertMoney() {
+    function get500(){
+        setMoney(money + 500);
+    }
+    function get1000(){
+        setMoney(money + 1000);
+    }
+    function get2000(){
         setMoney(money + 2000);
     }
 
@@ -12,8 +20,14 @@ const Wallet = ({money, setMoney}) => {
             <h1>내 지갑</h1>
             <div>
             <div className="money-input">
-                <button onClick={InsertMoney}>
-                    <img src={coin} alt="동전" />
+                <button onClick={get500}>
+                    <img src={money_500} alt="500원" />
+                </button>
+                <button onClick={get1000}>
+                    <img src={money_1000} alt="1000원" />
+                </button>
+                <button onClick={get2000}>
+                    <img src={money_2000} alt="2000원" />
                 </button>
             </div>
             <div className="mywallet">
