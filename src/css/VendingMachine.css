@@ -1,4 +1,10 @@
 @media screen {
+    .machine-wallet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .vending-machine {
         height: 500px;
         align-items: center;

@@ -39,7 +39,6 @@
 
 .containers {
   background-color: rgb(35, 83, 95);
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
