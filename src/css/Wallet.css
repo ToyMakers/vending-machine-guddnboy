@@ -9,6 +9,8 @@
     }
 
     .money-input{
+        display: flex;
+        justify-content: space-evenly;
         border: none;
         text-align: center;
         margin: 5% 0 10% 0;
