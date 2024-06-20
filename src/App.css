@@ -37,7 +37,9 @@
   }
 }
 
-.VendingMachine{
-  display: flex;
+.containers {
+  background-color: rgb(35, 83, 95);
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

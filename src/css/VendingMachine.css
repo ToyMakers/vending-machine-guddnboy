@@ -1,0 +1,64 @@
+@media screen {
+    .machine-wallet{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .vending-machine {
+        height: 500px;
+        align-items: center;
+        border: solid 3px rgb(236, 234, 222);
+        border-radius: 1%;
+        color: rgb(233, 225, 212);
+        background-color: rgb(148, 200, 196);
+        font-weight: 800;
+    }
+
+    .drink-list {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .center-deco{
+        display: flex;
+        justify-content: space-evenly;
+        align-items:"center";
+
+    }
+
+    .center-deco img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .center-deco img:hover{
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+
+    .drink-out-container{
+        display: flex; 
+        justify-content: center;
+        width: 300px;
+        height: 50;
+        margin-top: 100px;
+    }
+
+    .drink-out {
+        width: 300px;
+        height: 100%;
+    }
+    
+    .drink-out img{
+        width: 80%;
+        height: 100%;
+    }
+
+    
+}
