@@ -1,39 +1,26 @@
-# Vending Machine
-리액트 및 상태관리도구를 공부하기 위한 자판기 프로젝트입니다.
+# 🥤자판기 만들기
+리액트 및 상태관리도구를 공부하기 위한 자판기 만들기 프로젝트입니다.
 
-## Available Scripts
+<div align=center>
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/></a> &nbsp
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/></a> &nbsp
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/></a> &nbsp
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/></a> &nbsp
+</div>
 
-In the project directory, you can run:
+# 요구사항
+- 지갑의 코인은 [50, 100, 500, 1000]단위로 사용할 수 있다.
+- 음료는 [이름 / 재고 / 가격] 정보를 가지고 있다.
+- 지갑의 코인을 클릭하면 자판기에 표시된 금액이 증가한다.
+- 반환 레버를 클릭하면 자판기에 들어간 모든 코인은 반환구에 쌓이고 자판기에 표시된 금액이 0이 된다.
+- 동전 반환구를 클릭하면 쌓여있던 코인은 모두 지갑으로 되돌아 간다.
+- 자판기의 금액을 초과하지 않는 금액의 음료만 선택할 수 있다.
+- 재고가 없는 음료는 품절 처리되고 선택할 수 없다.
+- 선택한 음료는 문을 클릭하기 전까지는 기계안에 있고, 문을 클릭하면 선택했던 음료를 모두 인벤토리에 담을 수 있다.
 
-### `npm start`
+# 실행
+### npm 설치
+<code>npm install</code>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### npm 실행
+<code>npm start</code>
