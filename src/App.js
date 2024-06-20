@@ -1,12 +1,12 @@
 import './App.css';
-import VendingMachineContainer from './components/VendingMachineContainer';
+import Container from './components/Container';
 
 
 function App() {
   return (
     <div className='App'>
       <div className='containers'>
-        <VendingMachineContainer />
+        <Container />
 
       </div>
     </div>
