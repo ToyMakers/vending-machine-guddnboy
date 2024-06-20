@@ -9,34 +9,39 @@ import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
 import "../css/drinks.css";
 
+const DrinkList = ({ myMoney, setMyMoney }) => {
+    const drinks = [{ img: bearImg, name: "맥주", price: 3000 },
+        { img: bluehawai, name: "블루하와이", price: 2000 },
+        { img: bubbletea, name: "버블티", price: 2500 },
+        { img: coke, name: "콜라", price: 1500 },
+        { img: fanta, name: "환타", price: 1500 },
+        { img: lemonade, name: "레모네이드", price: 2000 },
+        { img: orangejuice, name: "오렌지주스", price: 1800 },
+        { img: vita500, name: "비타500", price: 1200 },
+    ];
 
-const DrinkList = ({ drinks }) => {
+    const handlePurchase = (price) => {
+        if (myMoney >= price) {
+            setMyMoney(myMoney - price);
+            alert("구매가 완료되었습니다.");
+        } else {
+            alert("잔액이 부족합니다.");
+        }
+    };
+
     return (
     <div className="drink-list">
-        <button className="drinks">
-        <img src={bearImg} alt="맥주" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={bluehawai} alt="블루하와이" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={bubbletea} alt="버블티" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={coke} alt="콜라" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={fanta} alt="환타" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={lemonade} alt="레모네이드" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={orangejuice} alt="오렌지주스" onClick="" ></img>
-        </button>
-        <button className="drinks">
-        <img src={vita500} alt="비타500" onClick="" ></img>
-        </button>
+         <div className="drink-list">
+            {drinks.map((drink, index) => (
+                <div className="drink-container" key={index}>
+                    <button className="drinks" onClick={() => handlePurchase(drink.price)}>
+                        <img src={drink.img} alt={drink.name} />
+                        <div className="drink-price">{drink.price}원
+                        </div>
+                    </button>
+                </div>
+            ))}
+        </div>
         </div>
     );
     };

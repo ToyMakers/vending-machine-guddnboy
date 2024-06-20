@@ -2,10 +2,9 @@ import React from "react";
 import "../css/VendingMachine.css";
 import ReturnDrink from "./ReturnDrink";
 import DrinkList from "./DrinkList";
-import Money from "./Money";
 
 
-const Machine = () => {
+const Machine = ({myMoney, setMyMoney}) => {
     return(
         <div className="vending-machine">
           <div>
@@ -13,11 +12,11 @@ const Machine = () => {
           </div>
           <div className="drink-list-container">
             <div className="drink-list">
-              <DrinkList/>
+              <DrinkList myMoney={myMoney} setMyMoney={setMyMoney}/>
             </div>
-          </div>
-          <div className="money-container">
-            <Money />
+            <div className="center-deco">
+              <h4>시원한 음료수 자판기</h4>
+            </div>
           </div>
           <div className="drink-out-container">
             <ReturnDrink />

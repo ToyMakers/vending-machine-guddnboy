@@ -1,13 +1,13 @@
 import './App.css';
-import VendingMachineContainer from './components/containers/VendingMachineContainer';
-import WalletContainer from './components/containers/WalletContainer';
+import VendingMachineContainer from './components/VendingMachineContainer';
+
 
 function App() {
   return (
     <div className='App'>
       <div className='containers'>
         <VendingMachineContainer />
-        <WalletContainer />
+
       </div>
     </div>
   );
