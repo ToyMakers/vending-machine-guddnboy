@@ -5,30 +5,18 @@ import money_1000 from "../img/money_1000.png";
 import money_2000 from "../img/money_2000.png";
 
 const Wallet = ({ money, onClickGet500, onClickGet1000, onClickGet2000 }) => {
-    const handleGet500 = () => {
-        onClickGet500();
-    };
-
-    const handleGet1000 = () => {
-        onClickGet1000();
-    };
-
-    const handleGet2000 = () => {
-        onClickGet2000();
-    };
-
     return (
         <div className="wallet-container">
             <h1>내 지갑</h1>
             <div>
                 <div className="money-input">
-                    <button onClick={handleGet500}>
+                    <button onClick={onClickGet500}>
                         <img src={money_500} alt="500원" />
                     </button>
-                    <button onClick={handleGet1000}>
+                    <button onClick={onClickGet1000}>
                         <img src={money_1000} alt="1000원" />
                     </button>
-                    <button onClick={handleGet2000}>
+                    <button onClick={onClickGet2000}>
                         <img src={money_2000} alt="2000원" />
                     </button>
                 </div>

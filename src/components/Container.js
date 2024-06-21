@@ -30,9 +30,9 @@ const Container = () => {
                 </div>
                 <Wallet
                     money={money}
-                    handleGet500={handleGet500}
-                    handleGet1000={handleGet1000}
-                    handleGet2000={handleGet2000}
+                    onClickGet500={handleGet500}
+                    onClickGet1000={handleGet1000}
+                    onClickGet2000={handleGet2000}
                 />
             </div>
         </div>
