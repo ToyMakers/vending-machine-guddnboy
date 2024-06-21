@@ -7,6 +7,18 @@ import { useState } from "react";
 const Container = () => {
     const [money, setMoney] = useState(0);
 
+    const handleGet500 = () => {
+        setMoney(money + 500);
+    };
+
+    const handleGet1000 = () => {
+        setMoney(money + 1000);
+    };
+
+    const handleGet2000 = () => {
+        setMoney(money + 2000);
+    };
+
     return (
         <div>
             <header>
@@ -16,7 +28,12 @@ const Container = () => {
                 <div className="vending-machine-container">
                     <Machine money={money} setMoney={setMoney} />
                 </div>
-                <Wallet money={money} setMoney={setMoney} />
+                <Wallet
+                    money={money}
+                    handleGet500={handleGet500}
+                    handleGet1000={handleGet1000}
+                    handleGet2000={handleGet2000}
+                />
             </div>
         </div>
     );
