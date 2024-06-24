@@ -14,7 +14,7 @@
     align-items: center;
     box-sizing: border-box;
     border: none;
-    background-color: rgb(148, 200, 196);
+    background-color: transparent;
 }
 
 .drinks:hover{

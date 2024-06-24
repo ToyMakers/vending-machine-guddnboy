@@ -24,20 +24,16 @@ const DrinkList = ({ buyDrink }) => {
     return (
         <div className="drink-list-container">
             <div className="drink-list">
-                <div className="drink-list">
-                    {drinks.map((drink) => (
-                        <div className="drink-container" key={drink.name}>
-                            <button
-                                className="drinks"
-                                onClick={() => buyDrink(drink)}>
-                                <img src={drink.img} alt={drink.name} />
-                                <div className="drink-price">
-                                    {drink.price}원
-                                </div>
-                            </button>
-                        </div>
-                    ))}
-                </div>
+                {drinks.map((drink) => (
+                    <div className="drink-container" key={drink.name}>
+                        <button
+                            className="drinks"
+                            onClick={() => buyDrink(drink)}>
+                            <img src={drink.img} alt={drink.name} />
+                            <div className="drink-price">{drink.price}원</div>
+                        </button>
+                    </div>
+                ))}
             </div>
         </div>
     );
