@@ -20,7 +20,7 @@ const Container = () => {
     };
 
     return (
-        <div>
+        <div className="containers">
             <header>
                 <h1>VendingMachine</h1>
             </header>
