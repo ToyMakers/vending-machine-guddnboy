@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../css/VendingMachine.css";
 import "../css/drinks.css";
 import insert_coin from "../img/insert.png";
@@ -10,6 +10,7 @@ import fanta from "../img/drinks/fanta.png";
 import lemonade from "../img/drinks/lemonade.png";
 import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
+import Inventory from "./Inventory";
 
 const ReturnDrink = ({
     insert,
@@ -24,13 +25,13 @@ const ReturnDrink = ({
         버블티: bubbletea,
         콜라: coke,
         환타: fanta,
-        레몬에이드: lemonade,
+        레모네이드: lemonade,
         오렌지주스: orangejuice,
         비타500: vita500,
     };
 
     return (
-        <div>
+        <Fragment>
             <div className="money-display">
                 <div className="insert-money">
                     <div className="display-insert">{insertMoney}</div>
@@ -54,19 +55,9 @@ const ReturnDrink = ({
                 <div className="drink-out">
                     <button onClick={getMyDrinks}></button>
                 </div>
-                <div>
-                    {myDrinks.map((drink, name) => (
-                        <img
-                            key={name}
-                            src={drinkImages[drink.name]}
-                            alt={drink.name}
-                            width="45px"
-                            height="45px"
-                        />
-                    ))}
-                </div>
             </div>
-        </div>
+            <Inventory myDrinks={myDrinks} drinkImages={drinkImages} />
+        </Fragment>
     );
 };
 
