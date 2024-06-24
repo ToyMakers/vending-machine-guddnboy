@@ -67,16 +67,30 @@
     }
 
     .drink-out-container{
-        display: flex; 
-        justify-content: center;
+        /* display: flex; 
+        justify-content: center; */
         width: 300px;
         height: 50;
         margin-top: 100px;
     }
 
-    .drink-out {
-        width: 300px;
-        height: 100%;
+    .drink-out button {
+        display: inline-block;
+        margin: 0 10px;
+        background-color: white;
+        width: 230px;
+        height: 80px;
+        cursor: pointer;
+    }
+
+    .drink-out button:hover{
+        margin: 0 10px;
+        background-color: gray;
+        width: transparent;
+        height: transparent;
+        border-top: 70px solid white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
     }
     
     .drink-out img{
@@ -84,5 +98,15 @@
         height: 100%;
     }
 
-    
+    .bought-drinks{
+        width: 100px;
+        height: 20px;
+        border-radius: 10%;
+        color: red;
+        background-color: black;
+    }
+
+    .bought-drinks li{
+        list-style-type: none;
+    }
 }

@@ -1,7 +1,5 @@
 /* eslint-disable array-callback-return */
 import React, { useState } from "react";
-import defaultReturning from "../img/defaultReturing.png";
-import Returning from "../img/Returning.png";
 import "../css/VendingMachine.css";
 import "../css/drinks.css";
 import insert_coin from "../img/insert.png";
@@ -10,12 +8,10 @@ const ReturnDrink = ({
     insert,
     insertMoney,
     returnMoney,
-    seletedDrink,
     returnDrinks,
+    selectedDrink,
     onClickResetDrinks,
 }) => {
-    const [isHovered, setIsHovered] = useState(false);
-
     return (
         <div>
             <div className="money-display">
@@ -38,15 +34,11 @@ const ReturnDrink = ({
                 <div className="present-money"></div>
             </div>
             <div className="drink-out-container">
-                <div
-                    className="drink-out"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}>
-                    <img
-                        src={isHovered ? Returning : defaultReturning}
-                        alt="상품 나오는 곳"
-                        onClick={returnDrinks}
-                    />
+                <div className="drink-out">
+                    <button></button>
+                </div>
+                <div className="bought-drinks">
+                    <li>{returnDrinks}</li>
                 </div>
             </div>
         </div>
