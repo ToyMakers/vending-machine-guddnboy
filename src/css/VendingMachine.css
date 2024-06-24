@@ -10,7 +10,7 @@
         align-items: center;
         border: solid 3px rgb(236, 234, 222);
         border-radius: 1%;
-        color: rgb(233, 225, 212);
+        color: black;
         background-color: rgb(148, 200, 196);
         font-weight: 800;
     }
@@ -23,36 +23,76 @@
         justify-content: center;
     }
 
-    .center-deco{
+    .display-insert{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 20px;
+        border-radius: 10%;
+        color:green ;
+        background-color: black;
+    }
+
+    .insert-money{
         display: flex;
         justify-content: space-evenly;
-        align-items:"center";
-
+        align-items: center;
     }
 
-    .center-deco img{
-        width: 40px;
-        height: 40px;
+    .insert-return{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .center-deco img:hover{
-        width: 45px;
-        height: 45px;
+    .insert-return button{
+        background-color: transparent;
+        border: none;
         cursor: pointer;
     }
 
+    .return-button{
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin-left: 30px;
+        border : 3px solid gray;
+        background-color: gray;
+    }
+
+    .return-button:hover{
+        background-color: red;
+        cursor: pointer;
+    }
 
     .drink-out-container{
-        display: flex; 
-        justify-content: center;
+        /* display: flex; 
+        justify-content: center; */
         width: 300px;
         height: 50;
         margin-top: 100px;
     }
 
-    .drink-out {
-        width: 300px;
-        height: 100%;
+    .drink-out button {
+        display: inline-block;
+        margin: 0 10px;
+        background-color: white;
+        width: 230px;
+        height: 80px;
+        cursor: pointer;
+        border: 0.5px solid black;
+        border-radius: 5%;
+    }
+
+    .drink-out button:hover{
+        margin: 0 10px;
+        background-color: gray;
+        width: transparent;
+        height: transparent;
+        border-top: 70px solid white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
     }
     
     .drink-out img{
@@ -60,5 +100,15 @@
         height: 100%;
     }
 
-    
+    .bought-drinks{
+        width: 100px;
+        height: 20px;
+        border-radius: 10%;
+        color: red;
+        background-color: black;
+    }
+
+    .bought-drinks li{
+        list-style-type: none;
+    }
 }
