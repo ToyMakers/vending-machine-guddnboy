@@ -8,6 +8,8 @@ import lemonade from "../img/drinks/lemonade.png";
 import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
 import "../css/drinks.css";
+import "../css/VendingMachine.css";
+import { useState } from "react";
 
 const DrinkList = ({ insertMoney, setInsertMoney }) => {
     const drinks = [
@@ -21,9 +23,14 @@ const DrinkList = ({ insertMoney, setInsertMoney }) => {
         { img: vita500, name: "비타500", price: 1200 },
     ];
 
+    const [selectedDrinks] = useState([]);
+
     function buyDrink(drink) {
         if (insertMoney >= drink.price) {
             setInsertMoney((insertMoney) => insertMoney - drink.price);
+            console.log(drink);
+            selectedDrinks.push(drink);
+            console.log(selectedDrinks);
         } else {
             console.log(drink.price, insertMoney);
             alert("보유 금액이 부족합니다.");
@@ -31,15 +38,23 @@ const DrinkList = ({ insertMoney, setInsertMoney }) => {
     }
 
     return (
-        <div className="drink-list">
-            {drinks.map((drink, index) => (
-                <div className="drink-container" key={index}>
-                    <button className="drinks" onClick={() => buyDrink(drink)}>
-                        <img src={drink.img} alt={drink.name} />
-                        <div className="drink-price">{drink.price}원</div>
-                    </button>
+        <div className="drink-list-container">
+            <div className="drink-list">
+                <div className="drink-list">
+                    {drinks.map((drink, name) => (
+                        <div className="drink-container" key={name}>
+                            <button
+                                className="drinks"
+                                onClick={() => buyDrink(drink)}>
+                                <img src={drink.img} alt={drink.name} />
+                                <div className="drink-price">
+                                    {drink.price}원
+                                </div>
+                            </button>
+                        </div>
+                    ))}
                 </div>
-            ))}
+            </div>
         </div>
     );
 };

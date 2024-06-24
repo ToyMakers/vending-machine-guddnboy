@@ -25,9 +25,7 @@ const Container = () => {
                 <h1>VendingMachine</h1>
             </header>
             <div className="machine-wallet">
-                <div className="vending-machine-container">
-                    <Machine money={money} setMoney={setMoney} />
-                </div>
+                <Machine money={money} setMoney={setMoney} />
                 <Wallet
                     money={money}
                     onClickGet500={handleGet500}
