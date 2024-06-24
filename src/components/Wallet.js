@@ -22,9 +22,6 @@ const Wallet = ({ money, onClickGet500, onClickGet1000, onClickGet2000 }) => {
                 </div>
                 <div className="mywallet">현재 잔액은 {money}입니다.</div>
             </div>
-            <div className="my-drinks">
-                <div>내가 뽑은 음료수</div>
-            </div>
         </div>
     );
 };
