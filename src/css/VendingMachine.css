@@ -22,9 +22,12 @@
         gap: 10px;
         justify-content: center;
     }
-
+    
     .my-drink-list{
         width: 300px;
+        right: 500px;
+        display: flex;
+        overflow: scroll;
     }
 
     .display-insert{
@@ -75,7 +78,7 @@
         justify-content: center; */
         width: 300px;
         height: 50;
-        margin-top: 100px;
+        margin: 100px 0 100px 0;
     }
 
     .drink-out button {

@@ -4,7 +4,7 @@ import "../css/VendingMachine.css";
 const Inventory = ({ myDrinks, drinkImages }) => {
     return (
         <div className="my-drinks">
-            <h4>내가 산 음료수들</h4>
+            <h2>내가 산 음료수들</h2>
             <div className="my-drink-list">
                 {myDrinks.map((drink, name) => (
                     <img
