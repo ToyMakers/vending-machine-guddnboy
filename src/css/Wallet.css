@@ -46,11 +46,8 @@
     }
 
     .wallet-container{
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
         width: 300px;
-        height: 500px;
+        height: 200px;
         border: 2px solid rgb(236, 234, 222);
         border-radius: 4px;
     }
