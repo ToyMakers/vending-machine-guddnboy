@@ -9,9 +9,8 @@ import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
 import "../css/drinks.css";
 import "../css/VendingMachine.css";
-import { useState } from "react";
 
-const DrinkList = ({ insertMoney, setInsertMoney }) => {
+const DrinkList = ({ buyDrink }) => {
     const drinks = [
         { img: bearImg, name: "맥주", price: 3000 },
         { img: bluehawai, name: "블루하와이", price: 2000 },
@@ -22,27 +21,12 @@ const DrinkList = ({ insertMoney, setInsertMoney }) => {
         { img: orangejuice, name: "오렌지주스", price: 1800 },
         { img: vita500, name: "비타500", price: 1200 },
     ];
-
-    const [selectedDrinks] = useState([]);
-
-    function buyDrink(drink) {
-        if (insertMoney >= drink.price) {
-            setInsertMoney((insertMoney) => insertMoney - drink.price);
-            console.log(drink);
-            selectedDrinks.push(drink);
-            console.log(selectedDrinks);
-        } else {
-            console.log(drink.price, insertMoney);
-            alert("보유 금액이 부족합니다.");
-        }
-    }
-
     return (
         <div className="drink-list-container">
             <div className="drink-list">
                 <div className="drink-list">
-                    {drinks.map((drink, name) => (
-                        <div className="drink-container" key={name}>
+                    {drinks.map((drink) => (
+                        <div className="drink-container" key={drink.name}>
                             <button
                                 className="drinks"
                                 onClick={() => buyDrink(drink)}>

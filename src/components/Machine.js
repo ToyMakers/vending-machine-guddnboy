@@ -7,10 +7,11 @@ import { useState } from "react";
 const Machine = ({ money, setMoney }) => {
     const [insertMoney, setInsertMoney] = useState(0);
     const [selectedDrink, setSelectedDrink] = useState([]);
+    const [myDrinks, setMyDrinks] = useState([]);
 
     const insert = () => {
         if (money < 1000) {
-            alert("보유 금액이 부족합니다.");
+            alert("1,000원 이상부터 금액 투입이 가능합니다.");
         } else {
             setInsertMoney(insertMoney + 1000);
             setMoney(money - 1000);
@@ -22,12 +23,36 @@ const Machine = ({ money, setMoney }) => {
         setInsertMoney(0);
     };
 
-    const returnDrinks = (drink) => {
-        setSelectedDrink([...selectedDrink, drink]);
+    const buyDrink = (drink) => {
+        if (insertMoney >= drink.price) {
+            setInsertMoney(insertMoney - drink.price);
+            setSelectedDrink([...selectedDrink, drink]);
+            console.log(drink.name);
+            console.log(selectedDrink);
+        } else {
+            console.log(drink.price, insertMoney);
+            alert("보유 금액이 부족합니다.");
+        }
     };
 
-    const resetSeletedDrink = () => {
+    const resetSelectedDrink = () => {
         setSelectedDrink([]);
+    };
+
+    const getMyDrinks = () => {
+        let status = 0;
+
+        if (selectedDrink.length === 0) {
+            alert("구매한 음료가 없습니다.");
+        } else {
+            setMyDrinks([...myDrinks, ...selectedDrink]);
+            console.log(myDrinks);
+            status = 1;
+        }
+        if (status === 1) {
+            resetSelectedDrink();
+            status = 0;
+        }
     };
 
     return (
@@ -36,17 +61,15 @@ const Machine = ({ money, setMoney }) => {
                 <div>
                     <h3>나만의 자판기</h3>
                 </div>
-                <DrinkList
-                    insertMoney={insertMoney}
-                    setInsertMoney={setInsertMoney}
-                />
+                <DrinkList buyDrink={buyDrink} />
                 <ReturnDrink
                     insert={insert}
                     insertMoney={insertMoney}
                     returnMoney={returnMoney}
-                    returnDrinks={returnDrinks}
-                    seletedDrink={selectedDrink}
-                    onClickResetDrinks={resetSeletedDrink}
+                    myDrinks={myDrinks}
+                    getMyDrinks={getMyDrinks}
+                    selectedDrink={selectedDrink}
+                    onClickResetDrinks={resetSelectedDrink}
                 />
             </div>
         </div>
