@@ -9,8 +9,9 @@ import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
 import "../css/drinks.css";
 import "../css/VendingMachine.css";
+import useStore from "./store.js";
 
-const DrinkList = ({ buyDrink }) => {
+const DrinkList = () => {
     const drinks = [
         { img: bearImg, name: "맥주", price: 3000 },
         { img: bluehawai, name: "블루하와이", price: 2000 },
@@ -21,6 +22,9 @@ const DrinkList = ({ buyDrink }) => {
         { img: orangejuice, name: "오렌지주스", price: 1800 },
         { img: vita500, name: "비타500", price: 1200 },
     ];
+
+    const buyDrink = useStore((state) => state.buyDrink);
+
     return (
         <div className="drink-list-container">
             <div className="drink-list">
