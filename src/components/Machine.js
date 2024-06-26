@@ -40,19 +40,17 @@ const Machine = ({ money, setMoney }) => {
     };
 
     const getMyDrinks = () => {
-        let status = 0;
-
         if (selectedDrink.length === 0) {
             alert("구매한 음료가 없습니다.");
         } else {
             setMyDrinks([...myDrinks, ...selectedDrink]);
             console.log(myDrinks);
-            status = 1;
         }
-        if (status === 1) {
-            resetSelectedDrink();
-            status = 0;
-        }
+    };
+
+    const takeMyDrinks = () => {
+        resetSelectedDrink();
+        setMyDrinks([]);
     };
 
     return (
@@ -70,6 +68,7 @@ const Machine = ({ money, setMoney }) => {
                     getMyDrinks={getMyDrinks}
                     selectedDrink={selectedDrink}
                     onClickResetDrinks={resetSelectedDrink}
+                    takeMyDrinks={takeMyDrinks}
                 />
             </div>
         </div>
