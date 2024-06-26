@@ -11,6 +11,7 @@ import lemonade from "../img/drinks/lemonade.png";
 import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
 import Inventory from "./Inventory";
+import drinking from "../img/drinking.png";
 
 const ReturnDrink = ({
     insert,
@@ -18,6 +19,7 @@ const ReturnDrink = ({
     returnMoney,
     getMyDrinks,
     myDrinks,
+    takeMyDrinks,
 }) => {
     const drinkImages = {
         맥주: bearImg,
@@ -57,6 +59,11 @@ const ReturnDrink = ({
                 </div>
             </div>
             <Inventory myDrinks={myDrinks} drinkImages={drinkImages} />
+            <div className="take-my-drinks">
+                <button onClick={takeMyDrinks}>
+                    <img src={drinking} alt="마시기"></img>
+                </button>
+            </div>
         </Fragment>
     );
 };
