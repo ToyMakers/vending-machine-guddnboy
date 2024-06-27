@@ -2,13 +2,12 @@ import React, { Fragment } from "react";
 import "../css/VendingMachine.css";
 import "../css/drinks.css";
 import insert_coin from "../img/insert.png";
-import Inventory from "./Inventory";
-import drinking from "../img/drinking.png";
 import useStore from "./store.js";
 
 const ReturnDrink = () => {
-    const { insertMoney, insert, returnMoney, getMyDrinks, takeMyDrinks } =
-        useStore((state) => state);
+    const { insertMoney, insert, returnMoney, getMyDrinks } = useStore(
+        (state) => state
+    );
 
     return (
         <Fragment>
@@ -35,12 +34,6 @@ const ReturnDrink = () => {
                 <div className="drink-out">
                     <button onClick={getMyDrinks}></button>
                 </div>
-            </div>
-            <Inventory />
-            <div className="take-my-drinks">
-                <button onClick={takeMyDrinks}>
-                    <img src={drinking} alt="마시기"></img>
-                </button>
             </div>
         </Fragment>
     );
