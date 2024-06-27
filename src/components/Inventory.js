@@ -10,9 +10,11 @@ import fanta from "../img/drinks/fanta.png";
 import lemonade from "../img/drinks/lemonade.png";
 import orangejuice from "../img/drinks/orangejuice.png";
 import vita500 from "../img/drinks/vita500.png";
+import drinking from "../img/drinking.png";
 
 const Inventory = () => {
     const myDrinks = useStore((state) => state.myDrinks);
+    const takeMyDrinks = useStore((state) => state.takeMyDrinks);
 
     const drinkImages = {
         맥주: bearImg,
@@ -27,17 +29,24 @@ const Inventory = () => {
 
     return (
         <div className="my-drinks">
-            <h2>내가 산 음료수들</h2>
+            <h2>My Drinks</h2>
             <div className="my-drink-list">
-                {myDrinks.map((drink, name) => (
-                    <img
-                        key={name}
-                        src={drinkImages[drink.name]}
-                        alt={drink.name}
-                        width="45px"
-                        height="45px"
-                    />
-                ))}
+                <li>
+                    {myDrinks.map((drink, name) => (
+                        <img
+                            key={name}
+                            src={drinkImages[drink.name]}
+                            alt={drink.name}
+                            width="45px"
+                            height="45px"
+                        />
+                    ))}
+                </li>
+            </div>
+            <div className="take-my-drinks">
+                <button onClick={takeMyDrinks}>
+                    <img src={drinking} alt="마시기"></img>
+                </button>
             </div>
         </div>
     );

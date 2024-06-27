@@ -6,6 +6,7 @@
     }
 
     .vending-machine {
+        width: 300px;
         height: 500px;
         align-items: center;
         border: solid 3px rgb(236, 234, 222);
@@ -21,6 +22,7 @@
         flex-wrap: wrap;
         gap: 10px;
         justify-content: center;
+        margin-bottom: 30px;
     }
     
     .my-drink-list{
