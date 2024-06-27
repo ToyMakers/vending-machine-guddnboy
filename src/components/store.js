@@ -11,16 +11,18 @@ const useStore = create((set) => ({
     handleGet1000: () => set((state) => ({ money: state.money + 1000 })),
     handleGet2000: () => set((state) => ({ money: state.money + 2000 })),
 
-    insert: (money) => {
-        if (money < 1000) {
-            alert("1,000원 이상부터 금액 투입이 가능합니다.");
-        } else {
-            set((state) => ({
-                insertMoney: state.insertMoney + 1000,
-                money: state.money - 1000,
-            }));
-        }
-    },
+    insert: () =>
+        set((state) => {
+            if (state.money < 1000) {
+                alert("1,000원 이상부터 금액 투입이 가능합니다.");
+                return {};
+            } else {
+                return {
+                    insertMoney: state.insertMoney + 1000,
+                    money: state.money - 1000,
+                };
+            }
+        }),
 
     returnMoney: () =>
         set((state) => ({
@@ -31,7 +33,6 @@ const useStore = create((set) => ({
     buyDrink: (drink) =>
         set((state) => {
             if (state.insertMoney >= drink.price) {
-                alert("음료가 구매되었습니다.");
                 return {
                     insertMoney: state.insertMoney - drink.price,
                     selectedDrink: [...state.selectedDrink, drink],
