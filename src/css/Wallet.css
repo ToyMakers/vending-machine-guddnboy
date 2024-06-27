@@ -1,4 +1,9 @@
 @media screen {
+    .money-display{
+        width: 300px;
+
+    }
+
     .money-container {
         background-color: rgb(233, 225, 212);
         width: 100%;
@@ -19,7 +24,6 @@
     .money-input button {
         width: 45px;
         height: 45px;
-        /* margin: 5% 5% 0 0; */
         background-color: transparent;
         border: none;
     }
@@ -27,12 +31,11 @@
     .money-input button img{
         width: 45px;
         height:45px;
+        cursor: pointer;
     }
 
-    .money-input button img:hover{
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
+    .mywallet{
+        padding-bottom: 50px;
     }
 
     .input-decoration{
@@ -46,11 +49,18 @@
     }
 
     .wallet-container{
+        background-color: rgb(137,51,0);
         width: 300px;
-        height: 200px;
+        height: 500px;
         border: 2px solid rgb(236, 234, 222);
         border-radius: 4px;
     }
+
+    .wallet-container h1{
+        text-align: center;
+        color: rgb(236, 234, 222);
+    }
+    
     
     .mywallet{
         display: flex;
