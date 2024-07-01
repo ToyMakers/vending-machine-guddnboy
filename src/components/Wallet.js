@@ -18,18 +18,25 @@ const Wallet = () => {
     return (
         <div className="wallet-container">
             <h1>내 지갑</h1>
-            <div className="money-input">
-                <button onClick={handleGet500}>
-                    <img src={money_500} alt="500원" />
-                </button>
-                <button onClick={handleGet1000}>
-                    <img src={money_1000} alt="1000원" />
-                </button>
-                <button onClick={handleGet2000}>
-                    <img src={money_2000} alt="2000원" />
-                </button>
+            <div className="money-input-container">
+                <div className="money-input">
+                    <button onClick={handleGet500}>
+                        <img src={money_500} alt="500원" />
+                    </button>
+                    <button onClick={handleGet1000}>
+                        <img src={money_1000} alt="1000원" />
+                    </button>
+                    <button onClick={handleGet2000}>
+                        <img src={money_2000} alt="2000원" />
+                    </button>
+                </div>
+                <div className="money-values">
+                    <div className="money-500">500</div>
+                    <div className="money-1000">1000</div>
+                    <div className="money-2000">2000</div>
+                </div>
             </div>
-            <div className="mywallet">현재 잔액은 {money}입니다.</div>
+            <div className="mywallet">현재 잔액은 {money} 입니다.</div>
             <Inventory />
         </div>
     );
