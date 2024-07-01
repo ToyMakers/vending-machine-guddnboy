@@ -31,6 +31,10 @@ const ReturnDrink = () => {
                 <div className="present-money"></div>
             </div>
             <div className="drink-out-container">
+                <div className="returning-money">
+                    <div className="empty-returning-container"></div>
+                    <button className="returning-money-button"></button>
+                </div>
                 <div className="drink-out">
                     <button onClick={getMyDrinks}></button>
                 </div>
