@@ -4,6 +4,7 @@
         justify-content: center;
         align-items: center;
     }
+    
     .vending-machine {
         width: 300px;
         height: 500px;
@@ -16,18 +17,22 @@
     }
 
     .drink-list {
-        width: 300px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        width: 298px;
+        display: grid;
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(2, 50px);
+        gap: 15px;
         justify-content: center;
-        margin-bottom: 30px;
+        padding : 20px 0;
+        background-color: lightblue;
+        border: 2px solid lightgray;
     }
     
     .my-drink-list{
         width: 300px;
-        right: 500px;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        overflow: hidden;
         overflow-y: scroll;
     }
 
@@ -46,6 +51,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        padding-top : 20px
     }
 
     .insert-return{

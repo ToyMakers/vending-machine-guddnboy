@@ -8,7 +8,7 @@ const useStore = create((set) => ({
     selectedDrink: [],
     myDrinks: [],
 
-    handleGet500: (insertMoney) =>
+    handleGet500: () =>
         set((state) => {
             if (state.money < 500) {
                 alert("보유 금액을 확인하세요.");
