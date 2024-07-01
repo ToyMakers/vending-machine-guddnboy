@@ -1,15 +1,48 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-    money: 0,
+    money: 20000,
     insertMoney: 0,
 
     selectedDrink: [],
     myDrinks: [],
 
-    handleGet500: () => set((state) => ({ money: state.money + 500 })),
-    handleGet1000: () => set((state) => ({ money: state.money + 1000 })),
-    handleGet2000: () => set((state) => ({ money: state.money + 2000 })),
+    handleGet500: (insertMoney) =>
+        set((state) => {
+            if (state.money < 500) {
+                alert("보유 금액을 확인하세요.");
+                return {};
+            } else {
+                return {
+                    money: state.money - 500,
+                    insertMoney: state.insertMoney + 500,
+                };
+            }
+        }),
+    handleGet1000: () =>
+        set((state) => {
+            if (state.money < 1000) {
+                alert("보유 금액을 확인하세요.");
+                return {};
+            } else {
+                return {
+                    money: state.money - 1000,
+                    insertMoney: state.insertMoney + 1000,
+                };
+            }
+        }),
+    handleGet2000: () =>
+        set((state) => {
+            if (state.money < 2000) {
+                alert("보유 금액을 확인하세요.");
+                return {};
+            } else {
+                return {
+                    money: state.money - 2000,
+                    insertMoney: state.insertMoney + 2000,
+                };
+            }
+        }),
 
     insert: () =>
         set((state) => {
@@ -39,7 +72,7 @@ const useStore = create((set) => ({
                 };
             } else {
                 alert("보유 금액이 부족합니다.");
-                return {}; // 상태를 변경하지 않음
+                return {};
             }
         }),
 
@@ -49,7 +82,7 @@ const useStore = create((set) => ({
         set((state) => {
             if (state.selectedDrink.length === 0) {
                 alert("구매한 음료가 없습니다.");
-                return {}; // 상태를 변경하지 않음
+                return {};
             } else {
                 return {
                     myDrinks: [...state.myDrinks, ...state.selectedDrink],
