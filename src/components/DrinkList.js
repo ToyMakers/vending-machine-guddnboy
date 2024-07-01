@@ -24,7 +24,7 @@ const DrinkList = () => {
     ];
 
     const buyDrink = useStore((state) => state.buyDrink);
-
+    const insertMoney = useStore((state) => state.insertMoney);
     return (
         <div className="drink-list-container">
             <div className="drink-list">
@@ -34,8 +34,17 @@ const DrinkList = () => {
                             className="drinks"
                             onClick={() => buyDrink(drink)}>
                             <img src={drink.img} alt={drink.name} />
-                            <div className="drink-price">{drink.price}원</div>
                         </button>
+                        <div
+                            className="drink-price"
+                            style={{
+                                color:
+                                    insertMoney >= drink.price
+                                        ? "green"
+                                        : "red",
+                            }}>
+                            {drink.price}원
+                        </div>
                     </div>
                 ))}
             </div>
