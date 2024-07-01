@@ -3,6 +3,7 @@ import { create } from "zustand";
 const useStore = create((set) => ({
     money: 20000,
     insertMoney: 0,
+    tmpMoney: 0,
 
     selectedDrink: [],
     myDrinks: [],
@@ -59,8 +60,14 @@ const useStore = create((set) => ({
 
     returnMoney: () =>
         set((state) => ({
-            money: state.money + state.insertMoney,
+            tmpMoney: state.tmpMoney + state.insertMoney,
             insertMoney: 0,
+        })),
+
+    getReturnMoney: () =>
+        set((state) => ({
+            money: state.money + state.tmpMoney,
+            tmpMoney: 0,
         })),
 
     buyDrink: (drink) =>

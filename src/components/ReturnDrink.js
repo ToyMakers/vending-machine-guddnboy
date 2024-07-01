@@ -5,7 +5,7 @@ import insert_coin from "../img/insert.png";
 import useStore from "./store.js";
 
 const ReturnDrink = () => {
-    const { insertMoney, returnMoney, getMyDrinks } = useStore(
+    const { insertMoney, returnMoney, getMyDrinks, getReturnMoney } = useStore(
         (state) => state
     );
 
@@ -31,6 +31,12 @@ const ReturnDrink = () => {
                 <div className="present-money"></div>
             </div>
             <div className="drink-out-container">
+                <div className="returning-money">
+                    <div className="empty-returning-container"></div>
+                    <button
+                        className="returning-money-button"
+                        onClick={getReturnMoney}></button>
+                </div>
                 <div className="drink-out">
                     <button onClick={getMyDrinks}></button>
                 </div>
