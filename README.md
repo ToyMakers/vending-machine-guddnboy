@@ -25,4 +25,4 @@
 <code>npm start</code>
 
 ### netlify 배포
-Link : https://66825b38bd48fb0008b05124--zingy-bubblegum-81d78b.netlify.app/
+Link : https://development--zingy-bubblegum-81d78b.netlify.app/
