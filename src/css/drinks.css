@@ -1,85 +1,88 @@
-.drink-container{
-    display: grid;
-    width: 50px;
-    height: 50px;
-    justify-items: center;
-    align-content: center;
-}
+@media screen {
 
-
-.drinks {
-    width: 50px;
-    height: 50px;
-    margin: 3px;
-    font-size: 12px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.drink-price{
-    display: flex;
-    width: 50px;
-    background-color: rgb(40, 38, 38);
-    border-radius: 5%;
-    font-size: 10px;
-    margin-bottom: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.drinks img{
-    width: 40px;
-    height: 40px;
-
-}
-
-.my-drinks{
-    border-top: 3px solid rgb(236, 234, 222);
-    padding-bottom: 16px;
-    background-color: rgb(35, 83, 95);
-}
-
-.my-drinks h2{
-    text-align: center;
-    color: rgb(236, 234, 222);
-}
-
-.my-drink-list{
-    height: 100px;
-}
-
-.my-drink-list li{
-    list-style: none;
-}
-
-.take-my-drinks{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5% 0 -2% 0;
-
-}
-
-.take-my-drinks button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-/* .take-my-drinks button:hover{
-    img{
+    .drink-container{
+        display: grid;
         width: 50px;
         height: 50px;
+        justify-items: center;
+        align-content: center;
     }
-} */
 
-.take-my-drinks img{
-    background-color: transparent;
-    width: 45px;
-    height: 45px;
+
+    .drinks {
+        width: 50px;
+        height: 50px;
+        margin: 3px;
+        font-size: 12px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .drink-price{
+        display: flex;
+        width: 50px;
+        background-color: rgb(40, 38, 38);
+        border-radius: 5%;
+        font-size: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .drinks img{
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .my-drinks{
+        border-top: 3px solid rgb(236, 234, 222);
+        padding-bottom: 16px;
+        background-color: rgb(35, 83, 95);
+    }
+
+    .my-drinks h2{
+        text-align: center;
+        color: rgb(236, 234, 222);
+    }
+
+    .my-drink-list{
+        height: 100px;
+    }
+
+    .my-drink-list li{
+        list-style: none;
+    }
+
+    .take-my-drinks{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0 -2% 0;
+
+    }
+
+    .take-my-drinks button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* .take-my-drinks button:hover{
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    } */
+
+    .take-my-drinks img{
+        background-color: transparent;
+        width: 45px;
+        height: 45px;
+    }
 }
